@@ -7,7 +7,7 @@
 
 // lessThanOrEqualToZero(-2) ➞ true
 
-// lessThanOrEqualToZero(1) ➞ false
+// lessThanOrEqualToZero(1) ➞ false.
 
 function lessThanOrEqualToZero(num) {
 	if (num < 0 || num === 0) return true
