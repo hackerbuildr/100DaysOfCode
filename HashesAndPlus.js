@@ -9,6 +9,7 @@
 
 // hashPlusCount("") ➞ [0, 0]
 
+//Option1:
 function hashPlusCount(str) {
     let obj1 = { hash: 0, plus: 0 };
     for (const i in str.split('')) {
@@ -17,4 +18,9 @@ function hashPlusCount(str) {
     }
     return [obj1.hash, obj1.plus]
 }
+//Option2
+const hashPlusCount = str => [
+    (str.match(/#/g) || []).length,
+    (str.match(/\+/g) || []).length,
+];
 hashPlusCount('##+')
