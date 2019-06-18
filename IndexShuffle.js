@@ -8,6 +8,7 @@
 // indexShuffle("holiday") ➞ "hldyoia"
 // indexShuffle("maybe") ➞ "myeab"
 
+//Option1
 function indexShuffle(str) {
     // make 2 empty strings (one for odd and one for even-indexed letters)
     //use filter method to filter out eve and odd-indexed letters
@@ -21,5 +22,11 @@ function indexShuffle(str) {
     console.log(`${str1}${str2}`);
 }
 
+//Option2
+function indexShuffle(str) {
+    let evens = [...str].filter((ch, i) => i % 2 === 0);
+    let odds = [...str].filter((ch, i) => i % 2 === 1);
+    return [...evens, ...odds].join('')
+}
 
 indexShuffle("it was a beautiful day")
